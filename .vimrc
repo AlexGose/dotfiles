@@ -25,6 +25,8 @@ call plug#begin()
 " the Conquer of Completion (CoC) plug -- adds VSCode completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug '~/Documents/Vim/sendlines.vim'
+
 " Add new vim Plug Plugins here
 
 call plug#end()
