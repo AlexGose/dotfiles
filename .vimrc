@@ -61,6 +61,8 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 
 " Add sql file key bindings here
 
+" For sql files, send visually selected lines to the right tmux pane
+" (note: this uses the sendlines.vim plugin)
 autocmd FileType sql vnoremap <buffer> <F9> :<c-u>call SendLines("{right}")<CR>
 
 " Add pandoc key bindings here
