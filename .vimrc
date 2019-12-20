@@ -59,6 +59,10 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 " format code on <cr>
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+" Add sql file key bindings here
+
+autocmd FileType sql vnoremap <buffer> <F9> :<c-u>call SendLines("{right}")<CR>
+
 " Add pandoc key bindings here
 
 " For pandoc markdown, map F5 to Zotero's citation picker in insert mode 
