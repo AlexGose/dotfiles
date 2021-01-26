@@ -1,30 +1,10 @@
-" vundle package and plugins
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-
-Plugin 'JuliaLang/julia-vim'
-
-Plugin 'vim-pandoc/vim-pandoc'
-
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-
-" Plugin 'Valloric/YouCompleteMe'
-
-" Add new vim Vundle plugins here
-
-call vundle#end()
-filetype plugin indent on
-
 " Plug package and plugins
 call plug#begin()
 
-" the Conquer of Completion (CoC) plug -- adds VSCode completion
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 Plug 'AlexGose/sendlines.vim'
 
 " Add new vim Plug Plugins here
