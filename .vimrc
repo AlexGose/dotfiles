@@ -14,6 +14,36 @@ call plug#end()
 " use relative line numbers
 set number relativenumber
 
+" no highlight searching
+set nohlsearch
+
+" no sounds
+set noerrorbells
+
+" spaces a Tab in the text stands for
+set tabstop=4
+
+" spaces inserted for pressing Tab
+set softtabstop=4
+
+" spaces used for (auto) indent
+set shiftwidth=4
+
+" expand Tab to spaces in Insert mode
+set expandtab
+
+" incremental highlighting while searching
+set incsearch
+
+" bar to mark 80 characters
+set colorcolumn=80
+
+" extra column
+set signcolumn=yes
+
+" Use full 24-bit colors
+set termguicolors
+
 " map , to save the file
 nnoremap , :w<CR>
 
@@ -23,7 +53,7 @@ nnoremap ,q :wq<CR>
 " F4 to toggle highlighting on/off, and show current value.
 noremap <F4> :set hlsearch! hlsearch?<CR>
 
-" Add Conquer of Completion (CoC) key bindings here 
+" Add Conquer of Completion (CoC) key bindings here
 
 " Use Tab and shift+Tab to navigate the completion list:
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -32,7 +62,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Use <cr> to confirm completion
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" make <cr> select the first completion item and confirm the 
+" make <cr> select the first completion item and confirm the
 " completion when no item has been selected:
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
