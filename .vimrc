@@ -83,13 +83,13 @@ autocmd FileType pandoc inoremap <buffer> <F5> <C-r>=system("curl -s 'http://loc
 " For pandoc markdown files, map F9 to compile into a pdf file
 autocmd FileType pandoc noremap <buffer> <F9> :make %:r.pdf<CR>
 
-" For pandoc markdown files, map F10 to open the compiled pdf file
-autocmd FileType pandoc noremap <buffer> <F10> :!zathura %:r.pdf &<CR><CR>
+" For pandoc markdown files, map F12 to open the compiled pdf file
+autocmd FileType pandoc noremap <buffer> <F12> :!zathura %:r.pdf &<CR><CR>
 
 " For pandoc markdown files, map F2 to insert the date as a second level header
 autocmd FileType pandoc noremap <buffer> <F2> zii# <ESC>:r!date --date='now' +'\%A \%d \%B \%Y'<CR>kJo<CR>## <ESC>zia
 
-" For Pandoc Markdown, find "<++>" and replace in insert mode 
+" For Pandoc Markdown, find "<++>" and replace in insert mode
 autocmd FileType pandoc nnoremap <buffer> ;; /<++><CR>da<a
 
 " Read an empty pandoc markdown tag for python code and move cursor
@@ -103,8 +103,8 @@ autocmd FileType pandoc nnoremap <buffer> ;bp :read $HOME/Documents/Vim/Snippets
 " For latex files, map F9 to compile the file into a pdf using a makefile
 autocmd FileType tex noremap <buffer> <F9> :make %:r.pdf<CR>
 
-" For latex files, map F10 to open the compiled pdf file
-autocmd FileType tex noremap <buffer> <F10> :!evince %:r.pdf &<CR>
+" For latex files, map F12 to open the compiled pdf file
+autocmd FileType tex noremap <buffer> <F12> :!evince %:r.pdf &<CR>
 
 " for latex files, map F5 to Zotero's citation picker in insert mode
 autocmd FileType tex inoremap <buffer> <F5> <C-r>=system("curl -s 'http://localhost:23119/better-bibtex/cayw?format=citep&brackets=t' \| tr -d '\n'")<CR>
