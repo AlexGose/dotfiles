@@ -3,3 +3,4 @@
 	email = alexgose@users.noreply.github.com
 [core]
 	editor = nvim
+	excludesfile = ~/.gitignore
