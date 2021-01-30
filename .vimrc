@@ -32,6 +32,9 @@ set shiftwidth=4
 " expand Tab to spaces in Insert mode
 set expandtab
 
+" use unicode characters for tabs and end of line:
+set list lcs=tab:»·,eol:↲
+
 " incremental highlighting while searching
 set incsearch
 
