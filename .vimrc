@@ -84,7 +84,7 @@ autocmd FileType sql vnoremap <buffer> <F9> :<c-u>call SendLines("{right}")<CR>
 autocmd FileType pandoc inoremap <buffer> <F5> <C-r>=system("curl -s 'http://localhost:23119/better-bibtex/cayw?format=pandoc&brackets=t' \| tr -d '\n'")<CR>
 
 " For pandoc markdown files, map F9 to compile into a pdf file
-autocmd FileType pandoc noremap <buffer> <F9> :make %:r.pdf<CR>
+autocmd FileType pandoc noremap <buffer> <F9> :make %:r.pdf<CR><CR>
 
 " For pandoc markdown files, map F12 to open the compiled pdf file
 autocmd FileType pandoc noremap <buffer> <F12> :!zathura %:r.pdf &<CR><CR>
