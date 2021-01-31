@@ -1,6 +1,7 @@
 " Plug package and plugins
 call plug#begin()
 
+Plug 'morhetz/gruvbox'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -71,6 +72,9 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 
 " format code on <cr>
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" gruvbox plugin: 
+autocmd vimenter * ++nested colorscheme gruvbox
 
 " Add sql file key bindings here
 
