@@ -2,7 +2,7 @@ SHELL=/bin/bash
 CWD:=${CURDIR}
 
 .PHONY: all
-all: git neovim psql tmux # Install all configuration files
+all: git neovim psql tmux zathura # Install all configuration files
 
 .PHONY: git
 git: # Install Git configuration files
@@ -23,3 +23,6 @@ psql: # Install psql configuration file
 tmux: # Install Tmux configuration file
 	@ln -nsf ${CWD}/.tmux.conf ~/.tmux.conf
 
+.PHONY: zathura
+zathura: # Install Zathura configuration file
+	@ln -nsf ${CWD}/zathurarc ~/.config/zathura/zathurarc
