@@ -84,8 +84,8 @@ autocmd FileType sql vnoremap <buffer> <F9> :<c-u>call SendLines("{right}")<CR>
 
 " Add pandoc key bindings here
 
-" For pandoc markdown, map F5 to Zotero's citation picker in insert mode 
-autocmd FileType pandoc inoremap <buffer> <F5> <C-r>=system("curl -s 'http://localhost:23119/better-bibtex/cayw?format=pandoc&brackets=t' \| tr -d '\n'")<CR>
+" For pandoc markdown, map F5 to Zotero's citation picker in insert mode
+autocmd FileType pandoc inoremap <buffer> <F5> <C-r>=system("zotero_cite.py")<CR>
 
 " For pandoc markdown files, map F9 to compile into a pdf file
 autocmd FileType pandoc noremap <buffer> <F9> :make %:r.pdf<CR><CR>
